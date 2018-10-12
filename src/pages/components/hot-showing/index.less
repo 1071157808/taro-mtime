@@ -1,0 +1,54 @@
+.list {
+    padding: 20px;
+    margin: 20px 0;
+    font-size: 26px;
+    border-radius: 5px;
+    background: #FFFFFF;
+    &-main {
+        display: flex;
+        &-left {
+            flex: 1;
+        }
+        &-image {
+            width: 200px;
+            height: 200px;
+        }
+        &-right {
+            flex: 3;
+            margin-left: 20px;
+            .sell {
+                float: right;
+                padding: 5px 10px;
+                border-radius: 5px;
+                color: #FFFFFF;
+                background: lightcoral;
+            }
+            .buy {
+                float: right;
+                padding: 5px 10px;
+                border-radius: 5px;
+                color: #FFFFFF;
+                background: #409eff;
+            }
+        }
+    }
+    &-bottom {
+        height: 40px;
+        margin-top: 10px;
+        &-time {
+            float: left;
+        }
+        &-operation {
+            float: right;
+            .high-light {
+                color: #409eff;
+                &:first-child {
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+    .margin-bottom-15 {
+        margin-bottom: 15px
+    }
+}
