@@ -6,8 +6,11 @@ import { AtTabBar } from 'taro-ui'
 import './index.less'
 
 export default class BottomTab extends Component {
-    showTab(num) {
-        switch (num) {
+    showTab(index) {
+        if (index == this.props.tab) {
+            return
+        }
+        switch (index) {
             case 0:
                 Taro.redirectTo({
                     url: `/pages/index/index`
@@ -15,15 +18,10 @@ export default class BottomTab extends Component {
                 break;
             case 1:
                 Taro.redirectTo({
-                    url: `/pages/hot-showing/index`
-                })
-                break;
-            case 2:
-                Taro.redirectTo({
                     url: `/pages/coming-soon/index`
                 })
                 break;
-            case 3:
+            case 2:
                 Taro.redirectTo({
                     url: `/pages/user-center/index`
                 })
@@ -35,9 +33,8 @@ export default class BottomTab extends Component {
 
     render() {
         const tabList = [
-            { title: '正在售票', iconType: 'bell' },
-            { title: '正在热映', iconType: 'search' },
-            { title: '即将上映', iconType: 'analytics' },
+            { title: '正在热映', iconType: 'video' },
+            { title: '即将上映', iconType: 'calendar' },
             { title: '个人中心', iconType: 'user' }
         ]
 

@@ -15,7 +15,7 @@ export default class UserCenter extends Taro.Component {
     constructor() {
         super(...arguments)
         this.state = {
-            currentTab: 3
+            currentTab: 2
         }
     }
 

@@ -1,14 +1,10 @@
 import Taro from '@tarojs/taro'
 import { View } from '@tarojs/components'
-// import { AtTabs, AtTabsPane } from 'taro-ui'
-// 共用组件
-import DataList from '../components/coming-soon'
 import BottomTab from "../components/bottom-tab"
-import priceData from "../../assets/data/coming-soon.js"
-
+import MovieUnShowItem from '../components/movie-unShow-item'
 import './index.less'
 
-export default class ComeSoon extends Taro.Component {
+export default class HotShowing extends Taro.Component {
     config = {
         navigationBarTitleText: '即将上映'
     }
@@ -16,21 +12,40 @@ export default class ComeSoon extends Taro.Component {
     constructor() {
         super(...arguments)
         this.state = {
-            currentTab: 2
+            movieData: [],
+            currentTab: 1,
         }
+    }
+
+    componentDidMount() {
+        Taro.request({
+            url: 'https://api-m.mtime.cn/Movie/MovieComingNew.api',
+            data: {
+                locationId: 290
+            },
+            header: {
+                'content-type': 'application/json'
+            }
+        })
+            .then(res => {
+                this.setState({
+                    movieData: res.data.moviecomings
+                })
+            })
     }
 
     render() {
         return (
-            <View>
-                <View>
-                <DataList data={priceData}></DataList>
+            <View className='page'>
+                <View className='page-top'>
                 </View>
-                <View>
+                <View className='page-main'>
+                    <MovieUnShowItem data={this.state.movieData}></MovieUnShowItem>
+                </View>
+                <View className='page-bottom'>
                     <BottomTab tab={this.state.currentTab}></BottomTab>
                 </View>
             </View>
         )
     }
 }
-
