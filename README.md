@@ -26,16 +26,16 @@ npm run dev:h5
     ├── dev.js             
     ├── index.js           
     └── prod.js            
-├── src
-	├── assets            外部资源
-		├── data          mock 数据
-		├── images        图片资源
-    ├── pages             页面层 
-		├── coming-soon   即将上映
-		├── components    共用组件
+└── src
+    ├── assets            外部资源
+        ├── data          mock 数据
+        └── images        图片资源
+    └── pages             页面层 
+        ├── coming-soon   即将上映
+        ├── components    共用组件
         ├── hot-showing   正在热映
-		├── index         正在售票
-		├── user-center   用户中心
-		├── user-message  我的消息
-		├── index         个人资料
+        ├── index         正在售票
+        ├── user-center   用户中心
+        ├── user-message  我的消息
+        └── user-setting  个人资料
 ```
