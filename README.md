@@ -21,17 +21,21 @@ npm run dev:h5
 **文件目录**
 
 ```
-├── dist                   编译结果目录
-├── config                 配置目录
-|   ├── dev.js             开发时配置
-|   ├── index.js           默认配置
-|   └── prod.js            打包时配置
-├── src                    源码目录
-|   ├── pages              页面文件目录
-|   |   ├── index          index页面目录
-|   |   |   ├── index.js   index页面逻辑
-|   |   |   └── index.css  index页面样式
-|   ├── app.css            项目总通用样式
-|   └── app.js             项目入口文件
-└── package.json
+├── dist              编译后文件
+├── config            项目配置项
+    ├── dev.js             
+    ├── index.js           
+    └── prod.js            
+├── src
+	├── assets            外部资源
+		├── data          mock 数据
+		├── images        图片资源
+    ├── pages             页面层 
+		├── coming-soon   即将上映
+		├── components    共用组件
+        ├── hot-showing   正在热映
+		├── index         正在售票
+		├── user-center   用户中心
+		├── user-message  我的消息
+		├── index         个人资料
 ```
