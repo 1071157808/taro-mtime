@@ -1,5 +1,5 @@
 import Taro from '@tarojs/taro'
-import { View, Text} from '@tarojs/components'
+import { View, Text } from '@tarojs/components'
 import { AtIcon, AtAvatar, AtList, AtListItem } from "taro-ui"
 import BottomTab from "../components/bottom-tab"
 
@@ -25,7 +25,7 @@ export default class UserCenter extends Taro.Component {
         })
     }
 
-    showMessages (){
+    showMessages() {
         Taro.navigateTo({
             url: `/pages/user-message/index`
         })
@@ -40,8 +40,8 @@ export default class UserCenter extends Taro.Component {
             <View className='user-center'>
                 <View className='user-center-top'>
                     <View className='user-settings'>
-                        <AtIcon className='user-icon-right' value='bell' size='24' color='#999' onclick={this.showMessages}></AtIcon>
-                        <AtIcon className='user-icon-right settings' value='settings' size='24' color='#999' onclick={this.showSettings}></AtIcon>
+                        <AtIcon className='user-icon-right' value='bell' size='24' color='#999' onClick={this.showMessages.bind(this)}></AtIcon>
+                        <AtIcon className='user-icon-right settings' value='settings' size='24' color='#999' onClick={this.showSettings.bind(this)}></AtIcon>
                         <Text className='clearfix'></Text>
                     </View>
                     <View className='user-info gap'>

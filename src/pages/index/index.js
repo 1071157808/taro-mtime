@@ -19,7 +19,7 @@ export default class HotShowing extends Taro.Component {
 
     componentDidMount() {
         Taro.request({
-            url: '//api-m.mtime.cn/PageSubArea/HotPlayMovies.api',
+            url: 'https://api-m.mtime.cn/PageSubArea/HotPlayMovies.api',
             method: "GET",
             data: {
                 locationId: 290

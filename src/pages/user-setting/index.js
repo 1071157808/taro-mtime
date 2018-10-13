@@ -17,8 +17,8 @@ export default class UserSetting extends Taro.Component {
         }
     }
 
-    handleClick() {
-        console.log(123)
+    handleClick = e => {
+        console.log(e)
     }
 
     render() {
