@@ -7,7 +7,7 @@ import './index.less'
 
 export default class BottomTab extends Component {
     showTab(index) {
-        if (index == this.props.tab) {
+        if (index == this.props) {
             return
         }
         switch (index) {

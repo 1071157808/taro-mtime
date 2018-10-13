@@ -1,6 +1,6 @@
 import Taro from '@tarojs/taro'
-import { View, Text, AtAvatar} from '@tarojs/components'
-import { AtList, AtListItem } from "taro-ui"
+import { View, Text } from '@tarojs/components'
+import { AtList, AtAvatar, AtListItem } from "taro-ui"
 import avatarImage from '../../assets/images/avatar.jpg'
 
 import './index.less'
@@ -17,17 +17,21 @@ export default class UserSetting extends Taro.Component {
         }
     }
 
+    handleClick() {
+        console.log(123)
+    }
+
     render() {
         return (
-            <View className='user-setting'>
-                <View className='user-setting-avatar'>
+            <View className='user-settings'>
+                <View className='user-settings-avatar'>
                     <Text>头像</Text>
                     <View className='image'>
                         <AtAvatar circle image={avatarImage}></AtAvatar>
                     </View>
                 </View>
 
-                <View className='user-setting-list'>
+                <View className='user-settings-list'>
                     <AtList className='gap' hasBorder={false}>
                         <AtListItem title='昵称' extraText='三井寿' arrow='right' onClick={this.handleClick} />
                         <AtListItem title='性别' extraText='男' arrow='right' onClick={this.handleClick} />
